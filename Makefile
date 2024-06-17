@@ -12,10 +12,10 @@ TAG=edge
 INIT_ARGS=
 BUILD_ARGS=
 
-.PHONY: all init dockerbuild dockerclean dockerpush clean dist distclean maintainer-clean
+.PHONY: all init build dockerclean dockerpush clean dist distclean maintainer-clean
 .PHONY: install uninstall installtest test
 
-all: venv install-dep init dockerbuild
+all: venv install-dep init build
 
 init: venv
 ifeq ($(shell test -e defaults.env && echo yes), yes)
