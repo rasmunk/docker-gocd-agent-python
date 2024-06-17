@@ -1,6 +1,6 @@
 owner: ucphhpc
 builds:
-  docker-gocd-agent-python:
+  gocd-agent-python:
     "3.8":
       parent:
         owner: ucphhpc

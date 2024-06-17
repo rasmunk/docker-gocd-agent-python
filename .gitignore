@@ -162,5 +162,5 @@ cython_debug/
 #.idea/
 
 # Ignore the generated files
-!docker-gocd-agent-python/Dockerfile.j2
-docker-gocd-agent-python/
+!gocd-agent-python/Dockerfile.j2
+gocd-agent-python/

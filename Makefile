@@ -1,4 +1,4 @@
-PACKAGE_NAME=docker-gocd-agent-python
+PACKAGE_NAME=gocd-agent-python
 PACKAGE_NAME_FORMATTED=$(subst -,_,$(PACKAGE_NAME))
 OWNER=ucphhpc
 IMAGE=$(PACKAGE_NAME)
@@ -7,7 +7,7 @@ IMAGE=$(PACKAGE_NAME)
 DOCKER_BUILDKIT=1
 # NOTE: dynamic lookup with docker as default and fallback to podman
 DOCKER=$(shell which docker || which podman)
-ALL_IMAGES:=docker-gocd-agent-python 
+ALL_IMAGES:=gocd-agent-python 
 TAG=edge
 INIT_ARGS=
 BUILD_ARGS=
