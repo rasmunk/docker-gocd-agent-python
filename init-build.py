@@ -242,7 +242,7 @@ if __name__ == "__main__":
                     "SRC_DIRECTORY": REPO_NAME,
                     "TEST_DIRECTORY": REPO_NAME,
                     "PUSH_DIRECTORY": "publish-docker-scripts",
-                    "ARGS": "",
+                    "ARGS": "TAG={}".format(version),
                 },
             }
             generated_config["pipelines"][name_version_name] = name_pipeline

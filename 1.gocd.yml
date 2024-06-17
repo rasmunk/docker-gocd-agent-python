@@ -33,7 +33,7 @@ pipelines:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
     parameters:
-      ARGS: ''
+      ARGS: TAG=3.10
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.10'
       EXTRA_TAG: ''
@@ -65,7 +65,7 @@ pipelines:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
     parameters:
-      ARGS: ''
+      ARGS: TAG=3.11
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.11'
       EXTRA_TAG: ''
@@ -95,7 +95,7 @@ pipelines:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
     parameters:
-      ARGS: ''
+      ARGS: TAG=3.12
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.12'
       EXTRA_TAG: ''
@@ -125,7 +125,7 @@ pipelines:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
     parameters:
-      ARGS: ''
+      ARGS: TAG=3.8
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.8'
       EXTRA_TAG: ''
@@ -155,7 +155,7 @@ pipelines:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
     parameters:
-      ARGS: ''
+      ARGS: TAG=3.9
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.9'
       EXTRA_TAG: ''
@@ -185,7 +185,7 @@ pipelines:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
     parameters:
-      ARGS: ''
+      ARGS: TAG=edge
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: edge
       EXTRA_TAG: ''
@@ -215,7 +215,7 @@ pipelines:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
     parameters:
-      ARGS: ''
+      ARGS: TAG=latest
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: latest
       EXTRA_TAG: ''
