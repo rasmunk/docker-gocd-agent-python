@@ -51,8 +51,8 @@ def get_common_pipeline():
 
 def get_common_materials():
     common_materials = {
-        "ucphhpc_images": {
-            "git": "https://github.com/ucphhpc/{}.git".format(REPO_NAME),
+        "{}_git".format(REPO_NAME): {
+            "git": "https://github.com/rasmunk/{}.git".format(REPO_NAME),
             "branch": branch,
             "destination": REPO_NAME,
         },

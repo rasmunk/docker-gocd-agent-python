@@ -19,16 +19,16 @@ pipelines:
     label_template: ${COUNT}
     lock_behaviour: none
     materials:
+      docker-gocd-agent-python_git:
+        branch: main
+        destination: docker-gocd-agent-python
+        git: https://github.com/rasmunk/docker-gocd-agent-python.git
       publish_docker_git:
         branch: main
         destination: publish-docker-scripts
         git: https://github.com/rasmunk/publish-docker-scripts.git
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
-      ucphhpc_images:
-        branch: main
-        destination: docker-gocd-agent-python
-        git: https://github.com/ucphhpc/docker-gocd-agent-python.git
       upstream_docker-gocd-agent-python:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
@@ -51,16 +51,16 @@ pipelines:
     label_template: ${COUNT}
     lock_behaviour: none
     materials:
+      docker-gocd-agent-python_git:
+        branch: main
+        destination: docker-gocd-agent-python
+        git: https://github.com/rasmunk/docker-gocd-agent-python.git
       publish_docker_git:
         branch: main
         destination: publish-docker-scripts
         git: https://github.com/rasmunk/publish-docker-scripts.git
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
-      ucphhpc_images:
-        branch: main
-        destination: docker-gocd-agent-python
-        git: https://github.com/ucphhpc/docker-gocd-agent-python.git
       upstream_docker-gocd-agent-python:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
@@ -81,16 +81,16 @@ pipelines:
     label_template: ${COUNT}
     lock_behaviour: none
     materials:
+      docker-gocd-agent-python_git:
+        branch: main
+        destination: docker-gocd-agent-python
+        git: https://github.com/rasmunk/docker-gocd-agent-python.git
       publish_docker_git:
         branch: main
         destination: publish-docker-scripts
         git: https://github.com/rasmunk/publish-docker-scripts.git
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
-      ucphhpc_images:
-        branch: main
-        destination: docker-gocd-agent-python
-        git: https://github.com/ucphhpc/docker-gocd-agent-python.git
       upstream_docker-gocd-agent-python:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
@@ -111,16 +111,16 @@ pipelines:
     label_template: ${COUNT}
     lock_behaviour: none
     materials:
+      docker-gocd-agent-python_git:
+        branch: main
+        destination: docker-gocd-agent-python
+        git: https://github.com/rasmunk/docker-gocd-agent-python.git
       publish_docker_git:
         branch: main
         destination: publish-docker-scripts
         git: https://github.com/rasmunk/publish-docker-scripts.git
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
-      ucphhpc_images:
-        branch: main
-        destination: docker-gocd-agent-python
-        git: https://github.com/ucphhpc/docker-gocd-agent-python.git
       upstream_docker-gocd-agent-python:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
@@ -141,16 +141,16 @@ pipelines:
     label_template: ${COUNT}
     lock_behaviour: none
     materials:
+      docker-gocd-agent-python_git:
+        branch: main
+        destination: docker-gocd-agent-python
+        git: https://github.com/rasmunk/docker-gocd-agent-python.git
       publish_docker_git:
         branch: main
         destination: publish-docker-scripts
         git: https://github.com/rasmunk/publish-docker-scripts.git
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
-      ucphhpc_images:
-        branch: main
-        destination: docker-gocd-agent-python
-        git: https://github.com/ucphhpc/docker-gocd-agent-python.git
       upstream_docker-gocd-agent-python:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
@@ -171,16 +171,16 @@ pipelines:
     label_template: ${COUNT}
     lock_behaviour: none
     materials:
+      docker-gocd-agent-python_git:
+        branch: main
+        destination: docker-gocd-agent-python
+        git: https://github.com/rasmunk/docker-gocd-agent-python.git
       publish_docker_git:
         branch: main
         destination: publish-docker-scripts
         git: https://github.com/rasmunk/publish-docker-scripts.git
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
-      ucphhpc_images:
-        branch: main
-        destination: docker-gocd-agent-python
-        git: https://github.com/ucphhpc/docker-gocd-agent-python.git
       upstream_docker-gocd-agent-python:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
@@ -201,16 +201,16 @@ pipelines:
     label_template: ${COUNT}
     lock_behaviour: none
     materials:
+      docker-gocd-agent-python_git:
+        branch: main
+        destination: docker-gocd-agent-python
+        git: https://github.com/rasmunk/docker-gocd-agent-python.git
       publish_docker_git:
         branch: main
         destination: publish-docker-scripts
         git: https://github.com/rasmunk/publish-docker-scripts.git
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
-      ucphhpc_images:
-        branch: main
-        destination: docker-gocd-agent-python
-        git: https://github.com/ucphhpc/docker-gocd-agent-python.git
       upstream_docker-gocd-agent-python:
         pipeline: gocd-agent-docker-v23.4.0
         stage: push
