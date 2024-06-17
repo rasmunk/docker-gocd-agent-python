@@ -101,7 +101,7 @@ if __name__ == "__main__":
         "--config-name", default="1.gocd.yml", help="Name of the output gocd config"
     )
     parser.add_argument(
-        "--branch", default="master", help="The branch that should be built"
+        "--branch", default="main", help="The branch that should be built"
     )
     parser.add_argument("--tag", default="latest", help="The tag that should be built")
     parser.add_argument(

@@ -9,7 +9,8 @@ DOCKER_BUILDKIT=1
 DOCKER=$(shell which docker || which podman)
 ALL_IMAGES:=docker-gocd-agent-python 
 TAG=edge
-ARGS=
+INIT_ARGS=
+BUILD_ARGS=
 
 .PHONY: all init dockerbuild dockerclean dockerpush clean dist distclean maintainer-clean
 .PHONY: install uninstall installtest test
@@ -22,10 +23,10 @@ ifneq ($(shell test -e .env && echo yes), yes)
 		ln -s defaults.env .env
 endif
 endif
-	. $(VENV)/activate; python3 init-build.py --branch main
+	. $(VENV)/activate; python3 init-build.py ${INIT_ARGS}
 
 build: init
-	docker build -t ${OWNER}/${IMAGE}:${TAG} -f ./${PACKAGE_NAME}/Dockerfile.${TAG} ${ARGS} ${PACKAGE_NAME}
+	docker build -t ${OWNER}/${IMAGE}:${TAG} -f ./${PACKAGE_NAME}/Dockerfile.${TAG} ${BUILD_ARGS} ${PACKAGE_NAME}
 
 build-all: $(foreach i,${ALL_IMAGES},build/$(i))
 
@@ -35,9 +36,7 @@ dockerclean:
 dockerpush:
 	${DOCKER} push ${OWNER}/${IMAGE}:${TAG}
 
-clean:
-	${MAKE} dockerclean
-	${MAKE} distclean
+clean: dockerclean distclean
 	rm -fr .env
 	rm -fr .pytest_cache
 	rm -fr tests/__pycache__
@@ -48,10 +47,9 @@ dist:
 distclean:
 ### PLACEHOLDER ###
 
-maintainer-clean:
+maintainer-clean: distclean
 	@echo 'This command is intended for maintainers to use; it'
 	@echo 'deletes files that may need special tools to rebuild.'
-	${MAKE} distclean
 
 install-dep:
 	$(VENV)/pip install -r requirements.txt
