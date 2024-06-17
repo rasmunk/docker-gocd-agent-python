@@ -17,8 +17,3 @@ RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VER
     && ./configure --enable-optimizations \
     && make \
     && make install
-
-# IMPORTANT, since the /pre-docker-entrypoint.sh script is run as root
-# Ensure that it launches the /docker-entrypoint.sh script as the go user
-# before it exists
-ENTRYPOINT ["/pre-docker-entrypoint.sh"]
