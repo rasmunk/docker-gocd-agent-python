@@ -1,0 +1,24 @@
+FROM {{ parent }}
+ARG PYTHON_VERSION={{ PYTHON_VERSION }}
+
+RUN apt update && apt install -y \
+    build-essential \
+    wget \
+    tar \
+    make
+
+WORKDIR /tmp
+
+# https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz
+# https://www.python.org/ftp/python/3.8.19/Python-3.8.19.tar.xz
+RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz \
+    && tar -xf Python-${PYTHON_VERSION}.tar.xz \
+    && cd Python-${PYTHON_VERSION} \
+    && ./configure --enable-optimizations \
+    && make \
+    && make install
+
+# IMPORTANT, since the /pre-docker-entrypoint.sh script is run as root
+# Ensure that it launches the /docker-entrypoint.sh script as the go user
+# before it exists
+ENTRYPOINT ["/pre-docker-entrypoint.sh"]
