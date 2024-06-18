@@ -18,8 +18,7 @@ RUN apt update && apt install -y \
 
 WORKDIR /tmp
 
-# https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz
-# https://www.python.org/ftp/python/3.8.19/Python-3.8.19.tar.xz
+# Python fetched from https://www.python.org/ftp/python/
 RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz \
     && tar -xf Python-${PYTHON_VERSION}.tar.xz \
     && cd Python-${PYTHON_VERSION} \
