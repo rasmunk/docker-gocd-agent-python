@@ -5,7 +5,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v23.4.0
+        tag: v24.3.0
         pipeline_dependent: true
       parameters:
         PYTHON_VERSION: 3.8.19
@@ -13,7 +13,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v23.4.0
+        tag: v24.3.0
         pipeline_dependent: true
       parameters:
         PYTHON_VERSION: 3.9.19
@@ -21,7 +21,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v23.4.0
+        tag: v24.3.0
         pipeline_dependent: true
       parameters:
         PYTHON_VERSION: 3.10.14
@@ -29,7 +29,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v23.4.0
+        tag: v24.3.0
         pipeline_dependent: true
       parameters:
         PYTHON_VERSION: 3.11.9
@@ -37,7 +37,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v23.4.0
+        tag: v24.3.0
         pipeline_dependent: true
       parameters:
         PYTHON_VERSION: 3.12.4
@@ -45,7 +45,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v23.4.0
+        tag: v24.3.0
         pipeline_dependent: true
       parameters:
         PYTHON_VERSION: 3.12.4
@@ -53,7 +53,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v23.4.0
+        tag: v24.3.0
         pipeline_dependent: true
       parameters:
         PYTHON_VERSION: 3.12.4
