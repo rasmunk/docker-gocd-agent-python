@@ -1,5 +1,8 @@
 FROM {{ parent }}
-ARG PYTHON_VERSION={{ PYTHON_VERSION }}
+ARG PYTHON_MAJOR_VERSION={{ PYTHON_MAJOR_VERSION }}
+ARG PYTHON_MINOR_VERSION={{ PYTHON_MINOR_VERSION }}
+ARG PYTHON_VERSION={{ PYTHON_VERSION}}
+ARG PYTHON_DOWNLOAD_MD5={{ PYTHON_DOWNLOAD_MD5 }}
 
 RUN apt update && apt install -y \
     build-essential \
@@ -20,10 +23,12 @@ WORKDIR /tmp
 
 # Python fetched from https://www.python.org/ftp/python/
 RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz \
+    && echo "${PYTHON_DOWNLOAD_MD5} Python-${PYTHON_VERSION}.tar.xz" | md5sum -c - \
     && tar -xf Python-${PYTHON_VERSION}.tar.xz \
     && cd Python-${PYTHON_VERSION} \
     && ./configure --enable-optimizations \
     && make \
     && make install
 
+ENV PY=/usr/local/bin/python${PYTHON_MAJOR_VERSION}
 WORKDIR /
