@@ -28,7 +28,8 @@ RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VER
     && cd Python-${PYTHON_VERSION} \
     && ./configure --enable-optimizations \
     && make \
-    && make install
+    && make install \
+    && rm -rf /tmp/Python-${PYTHON_VERSION}*
 
 ENV PY=/usr/local/bin/python${PYTHON_MAJOR_VERSION}
 WORKDIR /
