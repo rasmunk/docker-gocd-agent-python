@@ -8,8 +8,8 @@ builds:
         tag: v24.3.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: 3.8
-        PYTHON_MINOR_VERSION: 19
+        PYTHON_MAJOR_VERSION: "3.8"
+        PYTHON_MINOR_VERSION: "19"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3819/
         PYTHON_DOWNLOAD_MD5: 2532d25930266546822c144b99652254
@@ -20,8 +20,8 @@ builds:
         tag: v24.3.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: 3.9
-        PYTHON_MINOR_VERSION: 19
+        PYTHON_MAJOR_VERSION: "3.9"
+        PYTHON_MINOR_VERSION: "19"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3919/
         PYTHON_DOWNLOAD_MD5: 87d0f8281237b972ff8b23e0e2c8d325
@@ -32,8 +32,8 @@ builds:
         tag: v24.3.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: 3.10
-        PYTHON_MINOR_VERSION: 14
+        PYTHON_MAJOR_VERSION: "3.10"
+        PYTHON_MINOR_VERSION: "14"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-31014/
         PYTHON_DOWNLOAD_MD5: 05148354ce821ba7369e5b7958435400
@@ -44,8 +44,8 @@ builds:
         tag: v24.3.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: 3.11
-        PYTHON_MINOR_VERSION: 9
+        PYTHON_MAJOR_VERSION: "3.11"
+        PYTHON_MINOR_VERSION: "9"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3119/
         PYTHON_DOWNLOAD_MD5: 22ea467e7d915477152e99d5da856ddc
@@ -56,8 +56,8 @@ builds:
         tag: v24.3.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: 3.12
-        PYTHON_MINOR_VERSION: 4
+        PYTHON_MAJOR_VERSION: "3.12"
+        PYTHON_MINOR_VERSION: "4"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3124/
         PYTHON_DOWNLOAD_MD5: d68f25193eec491eb54bc2ea664a05bd
@@ -68,8 +68,8 @@ builds:
         tag: v24.3.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: 3.12
-        PYTHON_MINOR_VERSION: 4
+        PYTHON_MAJOR_VERSION: "3.12"
+        PYTHON_MINOR_VERSION: "4"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3124/
         PYTHON_DOWNLOAD_MD5: d68f25193eec491eb54bc2ea664a05bd
@@ -80,8 +80,8 @@ builds:
         tag: v24.3.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: 3.12
-        PYTHON_MINOR_VERSION: 4
+        PYTHON_MAJOR_VERSION: "3.12"
+        PYTHON_MINOR_VERSION: "4"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3124/
         PYTHON_DOWNLOAD_MD5: d68f25193eec491eb54bc2ea664a05bd
