@@ -30,7 +30,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v24.5.0
+        pipeline: gocd-agent-docker-v25.3.0
         stage: push
     parameters:
       BUILD_ARGS: ''
@@ -63,7 +63,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v24.5.0
+        pipeline: gocd-agent-docker-v25.3.0
         stage: push
     parameters:
       BUILD_ARGS: ''
@@ -94,7 +94,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v24.5.0
+        pipeline: gocd-agent-docker-v25.3.0
         stage: push
     parameters:
       BUILD_ARGS: ''
@@ -125,7 +125,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v24.5.0
+        pipeline: gocd-agent-docker-v25.3.0
         stage: push
     parameters:
       BUILD_ARGS: ''
@@ -156,7 +156,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v24.5.0
+        pipeline: gocd-agent-docker-v25.3.0
         stage: push
     parameters:
       BUILD_ARGS: ''
@@ -187,7 +187,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v24.5.0
+        pipeline: gocd-agent-docker-v25.3.0
         stage: push
     parameters:
       BUILD_ARGS: ''
@@ -218,7 +218,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v24.5.0
+        pipeline: gocd-agent-docker-v25.3.0
         stage: push
     parameters:
       BUILD_ARGS: ''
