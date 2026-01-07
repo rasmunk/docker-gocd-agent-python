@@ -221,14 +221,15 @@ pipelines:
         pipeline: gocd-agent-docker-v25.3.0
         stage: push
     parameters:
+      IMAGE: gocd-agent-python
+      SRC_DIRECTORY: docker-gocd-agent-python
       BUILD_ARGS: ''
+      TEST_DIRECTORY: docker-gocd-agent-python
+      TEST_ARGS: ''
+      TEST_MAKE_TARGET: test
+      PUSH_DIRECTORY: publish-docker-scripts
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: latest
       EXTRA_TAG: ''
-      IMAGE: gocd-agent-python
-      PUSH_DIRECTORY: publish-docker-scripts
-      SRC_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
-      TEST_DIRECTORY: docker-gocd-agent-python
     template: docker_image
     timer: *id001
