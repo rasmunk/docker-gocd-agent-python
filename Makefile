@@ -7,7 +7,7 @@ IMAGE=$(PACKAGE_NAME)
 DOCKER_BUILDKIT=1
 # NOTE: dynamic lookup with docker as default and fallback to podman
 DOCKER=$(shell which docker || which podman)
-ALL_IMAGES:=gocd-agent-python
+VERSIONS:=3.10 3.11 3.12 3.13 3.14
 TAG=edge
 INIT_ARGS=
 BUILD_ARGS=
@@ -24,20 +24,23 @@ endif
 endif
 	. ${VENV}/activate; python3 init-build.py ${INIT_ARGS}
 
-.PHONY: build
-build: init
-	docker build -t ${OWNER}/${IMAGE}:${TAG} -f ./${PACKAGE_NAME}/Dockerfile.${TAG} ${BUILD_ARGS} ${PACKAGE_NAME}
+.PHONY: build/%
+build/%: init
+	docker build -t ${OWNER}/${IMAGE}:$(notdir $@) -f ./${PACKAGE_NAME}/Dockerfile.$(notdir $@) ${BUILD_ARGS} ${PACKAGE_NAME}
 
 .PHONY: build-all
-build-all: $(foreach i,${ALL_IMAGES},build/$(i))
+build-all: $(foreach i,${VERSIONS},build/$(i))
 
 .PHONY: dockerclean
 dockerclean:
 	${DOCKER} rmi -f ${OWNER}/${IMAGE}:${TAG}
 
-.PHONY: dockerpush
-dockerpush:
-	${DOCKER} push ${OWNER}/${IMAGE}:${TAG}
+.PHONY: dockerpush/%
+dockerpush/%:
+	${DOCKER} push ${OWNER}/${IMAGE}:$(notdir $@)
+
+.PHONY: push-all
+push-all: $(foreach i,${VERSIONS},dockerpush/$(i))
 
 .PHONY: clean
 clean: dockerclean distclean

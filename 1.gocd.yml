@@ -4,11 +4,11 @@ environments:
       DOCKERHUB_PASSWORD: '{{SECRET:[dockerhub][password]}}'
       DOCKERHUB_USERNAME: '{{SECRET:[dockerhub][username]}}'
     pipelines:
-    - gocd-agent-python-3.8
-    - gocd-agent-python-3.9
     - gocd-agent-python-3.10
     - gocd-agent-python-3.11
     - gocd-agent-python-3.12
+    - gocd-agent-python-3.13
+    - gocd-agent-python-3.14
     - gocd-agent-python-latest
     - gocd-agent-python-edge
 format_version: 10
@@ -30,19 +30,18 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.3.0
+        pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      IMAGE: gocd-agent-python
-      SRC_DIRECTORY: docker-gocd-agent-python
       BUILD_ARGS: ''
-      TEST_ARGS: ''
-      TEST_DIRECTORY: docker-gocd-agent-python
-      TEST_MAKE_TARGET: test
-      PUSH_DIRECTORY: publish-docker-scripts
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.10'
       EXTRA_TAG: ''
+      IMAGE: gocd-agent-python
+      PUSH_DIRECTORY: publish-docker-scripts
+      SRC_DIRECTORY: docker-gocd-agent-python
+      TEST_ARGS: ''
+      TEST_DIRECTORY: docker-gocd-agent-python
     template: docker_image
     timer: &id001
       only_on_changes: 'no'
@@ -64,19 +63,18 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.3.0
+        pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      IMAGE: gocd-agent-python
-      SRC_DIRECTORY: docker-gocd-agent-python
       BUILD_ARGS: ''
-      TEST_ARGS: ''
-      TEST_DIRECTORY: docker-gocd-agent-python
-      TEST_MAKE_TARGET: test
-      PUSH_DIRECTORY: publish-docker-scripts
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.11'
       EXTRA_TAG: ''
+      IMAGE: gocd-agent-python
+      PUSH_DIRECTORY: publish-docker-scripts
+      SRC_DIRECTORY: docker-gocd-agent-python
+      TEST_ARGS: ''
+      TEST_DIRECTORY: docker-gocd-agent-python
     template: docker_image
     timer: *id001
   gocd-agent-python-3.12:
@@ -96,22 +94,21 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.3.0
+        pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      IMAGE: gocd-agent-python
-      SRC_DIRECTORY: docker-gocd-agent-python
       BUILD_ARGS: ''
-      TEST_ARGS: ''
-      TEST_DIRECTORY: docker-gocd-agent-python
-      TEST_MAKE_TARGET: test
-      PUSH_DIRECTORY: publish-docker-scripts
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.12'
       EXTRA_TAG: ''
+      IMAGE: gocd-agent-python
+      PUSH_DIRECTORY: publish-docker-scripts
+      SRC_DIRECTORY: docker-gocd-agent-python
+      TEST_ARGS: ''
+      TEST_DIRECTORY: docker-gocd-agent-python
     template: docker_image
     timer: *id001
-  gocd-agent-python-3.8:
+  gocd-agent-python-3.13:
     display_order: -1
     group: docker_image
     label_template: ${COUNT}
@@ -128,22 +125,21 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.3.0
+        pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      IMAGE: gocd-agent-python
-      SRC_DIRECTORY: docker-gocd-agent-python
       BUILD_ARGS: ''
+      COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
+      DEFAULT_TAG: '3.13'
+      EXTRA_TAG: ''
+      IMAGE: gocd-agent-python
+      PUSH_DIRECTORY: publish-docker-scripts
+      SRC_DIRECTORY: docker-gocd-agent-python
       TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
-      TEST_MAKE_TARGET: test
-      PUSH_DIRECTORY: publish-docker-scripts
-      COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
-      DEFAULT_TAG: '3.8'
-      EXTRA_TAG: ''
     template: docker_image
     timer: *id001
-  gocd-agent-python-3.9:
+  gocd-agent-python-3.14:
     display_order: -1
     group: docker_image
     label_template: ${COUNT}
@@ -160,19 +156,18 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.3.0
+        pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      IMAGE: gocd-agent-python
-      SRC_DIRECTORY: docker-gocd-agent-python
       BUILD_ARGS: ''
+      COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
+      DEFAULT_TAG: '3.14'
+      EXTRA_TAG: ''
+      IMAGE: gocd-agent-python
+      PUSH_DIRECTORY: publish-docker-scripts
+      SRC_DIRECTORY: docker-gocd-agent-python
       TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
-      TEST_MAKE_TARGET: test
-      PUSH_DIRECTORY: publish-docker-scripts
-      COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
-      DEFAULT_TAG: '3.9'
-      EXTRA_TAG: ''
     template: docker_image
     timer: *id001
   gocd-agent-python-edge:
@@ -192,19 +187,18 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.3.0
+        pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      IMAGE: gocd-agent-python
-      SRC_DIRECTORY: docker-gocd-agent-python
       BUILD_ARGS: ''
-      TEST_ARGS: ''
-      TEST_DIRECTORY: docker-gocd-agent-python
-      TEST_MAKE_TARGET: test
-      PUSH_DIRECTORY: publish-docker-scripts
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: edge
       EXTRA_TAG: ''
+      IMAGE: gocd-agent-python
+      PUSH_DIRECTORY: publish-docker-scripts
+      SRC_DIRECTORY: docker-gocd-agent-python
+      TEST_ARGS: ''
+      TEST_DIRECTORY: docker-gocd-agent-python
     template: docker_image
     timer: *id001
   gocd-agent-python-latest:
@@ -224,18 +218,17 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.3.0
+        pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      IMAGE: gocd-agent-python
-      SRC_DIRECTORY: docker-gocd-agent-python
       BUILD_ARGS: ''
-      TEST_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
-      TEST_MAKE_TARGET: test
-      PUSH_DIRECTORY: publish-docker-scripts
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: latest
       EXTRA_TAG: ''
+      IMAGE: gocd-agent-python
+      PUSH_DIRECTORY: publish-docker-scripts
+      SRC_DIRECTORY: docker-gocd-agent-python
+      TEST_ARGS: ''
+      TEST_DIRECTORY: docker-gocd-agent-python
     template: docker_image
     timer: *id001

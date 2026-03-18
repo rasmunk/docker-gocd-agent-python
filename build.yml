@@ -1,87 +1,87 @@
 owner: ucphhpc
 builds:
   gocd-agent-python:
-    "3.8":
-      parent:
-        owner: ucphhpc
-        image: gocd-agent-docker
-        tag: v25.3.0
-        pipeline_dependent: true
-      parameters:
-        PYTHON_MAJOR_VERSION: "3.8"
-        PYTHON_MINOR_VERSION: "19"
-        PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
-        # Found at https://www.python.org/downloads/release/python-3819/
-        PYTHON_DOWNLOAD_MD5: 2532d25930266546822c144b99652254
-    "3.9":
-      parent:
-        owner: ucphhpc
-        image: gocd-agent-docker
-        tag: v25.3.0
-        pipeline_dependent: true
-      parameters:
-        PYTHON_MAJOR_VERSION: "3.9"
-        PYTHON_MINOR_VERSION: "19"
-        PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
-        # Found at https://www.python.org/downloads/release/python-3919/
-        PYTHON_DOWNLOAD_MD5: 87d0f8281237b972ff8b23e0e2c8d325
     "3.10":
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.3.0
+        tag: v25.4.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.10"
-        PYTHON_MINOR_VERSION: "14"
+        PYTHON_MINOR_VERSION: "20"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
-        # Found at https://www.python.org/downloads/release/python-31014/
-        PYTHON_DOWNLOAD_MD5: 05148354ce821ba7369e5b7958435400
+        # Found at https://www.python.org/downloads/release/python-31020/
+        PYTHON_DOWNLOAD_SHA256: de6517421601e39a9a3bc3e1bc4c7b2f239297423ee05e282598c83ec0647505
     "3.11":
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.3.0
+        tag: v25.4.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.11"
-        PYTHON_MINOR_VERSION: "9"
+        PYTHON_MINOR_VERSION: "15"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
-        # Found at https://www.python.org/downloads/release/python-3119/
-        PYTHON_DOWNLOAD_MD5: 22ea467e7d915477152e99d5da856ddc
+        # Found at https://www.python.org/downloads/release/python-31115/
+        PYTHON_DOWNLOAD_SHA256: 272179ddd9a2e41a0fc8e42e33dfbdca0b3711aa5abf372d3f2d51543d09b625
     "3.12":
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.3.0
+        tag: v25.4.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.12"
-        PYTHON_MINOR_VERSION: "4"
+        PYTHON_MINOR_VERSION: "13"
+        PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
+        # Found at https://www.python.org/downloads/release/python-31213/
+        PYTHON_DOWNLOAD_SHA256: c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684
+    "3.13":
+      parent:
+        owner: ucphhpc
+        image: gocd-agent-docker
+        tag: v25.4.0
+        pipeline_dependent: true
+      parameters:
+        PYTHON_MAJOR_VERSION: "3.13"
+        PYTHON_MINOR_VERSION: "12"
+        PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
+        # Found at https://www.python.org/downloads/release/python-31312/
+        PYTHON_DOWNLOAD_SHA256: 2a84cd31dd8d8ea8aaff75de66fc1b4b0127dd5799aa50a64ae9a313885b4593
+    "3.14":
+      parent:
+        owner: ucphhpc
+        image: gocd-agent-docker
+        tag: v25.4.0
+        pipeline_dependent: true
+      parameters:
+        PYTHON_MAJOR_VERSION: "3.14"
+        PYTHON_MINOR_VERSION: "3"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3124/
-        PYTHON_DOWNLOAD_MD5: d68f25193eec491eb54bc2ea664a05bd
+        PYTHON_DOWNLOAD_SHA256: a97d5549e9ad81fe17159ed02c68774ad5d266c72f8d9a0b5a9c371fe85d902b
     latest:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.3.0
+        tag: v25.4.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: "3.12"
-        PYTHON_MINOR_VERSION: "4"
+        PYTHON_MAJOR_VERSION: "3.14"
+        PYTHON_MINOR_VERSION: "3"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3124/
-        PYTHON_DOWNLOAD_MD5: d68f25193eec491eb54bc2ea664a05bd
+        PYTHON_DOWNLOAD_SHA256: a97d5549e9ad81fe17159ed02c68774ad5d266c72f8d9a0b5a9c371fe85d902b
     edge:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.3.0
+        tag: v25.4.0
         pipeline_dependent: true
       parameters:
-        PYTHON_MAJOR_VERSION: "3.12"
-        PYTHON_MINOR_VERSION: "4"
+        PYTHON_MAJOR_VERSION: "3.14"
+        PYTHON_MINOR_VERSION: "3"
         PYTHON_VERSION: ${PYTHON_MAJOR_VERSION}.${PYTHON_MINOR_VERSION}
         # Found at https://www.python.org/downloads/release/python-3124/
-        PYTHON_DOWNLOAD_MD5: d68f25193eec491eb54bc2ea664a05bd
+        PYTHON_DOWNLOAD_SHA256: a97d5549e9ad81fe17159ed02c68774ad5d266c72f8d9a0b5a9c371fe85d902b
