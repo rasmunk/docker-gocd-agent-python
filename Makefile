@@ -13,7 +13,7 @@ INIT_ARGS=
 BUILD_ARGS=
 
 .PHONY: all
-all: venv install-dep init build
+all: venv install-dep init build-all
 
 .PHONY: init
 init: venv

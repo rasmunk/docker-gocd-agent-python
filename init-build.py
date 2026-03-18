@@ -240,10 +240,12 @@ if __name__ == "__main__":
                     "COMMIT_TAG": "GO_REVISION_DOCKER_GOCD_AGENT_PYTHON",
                     "EXTRA_TAG": "",
                     "SRC_DIRECTORY": REPO_NAME,
+                    "BUILD_MAKE_TARGET": "build/{}".format(version),
+                    "BUILD_MAKE_ARGS": "",
                     "TEST_DIRECTORY": REPO_NAME,
-                    "PUSH_DIRECTORY": "publish-docker-scripts",
-                    "BUILD_ARGS": "",
-                    "TEST_ARGS": "",
+                    "TEST_MAKE_TARGET": "test",
+                    "TEST_MAKE_ARGS": "",
+                    "PUSH_DIRECTORY": "publish-docker-scripts"
                 },
             }
             generated_config["pipelines"][name_version_name] = name_pipeline

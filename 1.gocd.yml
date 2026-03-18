@@ -33,15 +33,17 @@ pipelines:
         pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      BUILD_ARGS: ''
+      BUILD_MAKE_ARGS: ''
+      BUILD_MAKE_TARGET: build/3.10
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.10'
       EXTRA_TAG: ''
       IMAGE: gocd-agent-python
       PUSH_DIRECTORY: publish-docker-scripts
       SRC_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
+      TEST_MAKE_ARGS: ''
+      TEST_MAKE_TARGET: test
     template: docker_image
     timer: &id001
       only_on_changes: 'no'
@@ -66,15 +68,17 @@ pipelines:
         pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      BUILD_ARGS: ''
+      BUILD_MAKE_ARGS: ''
+      BUILD_MAKE_TARGET: build/3.11
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.11'
       EXTRA_TAG: ''
       IMAGE: gocd-agent-python
       PUSH_DIRECTORY: publish-docker-scripts
       SRC_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
+      TEST_MAKE_ARGS: ''
+      TEST_MAKE_TARGET: test
     template: docker_image
     timer: *id001
   gocd-agent-python-3.12:
@@ -97,15 +101,17 @@ pipelines:
         pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      BUILD_ARGS: ''
+      BUILD_MAKE_ARGS: ''
+      BUILD_MAKE_TARGET: build/3.12
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.12'
       EXTRA_TAG: ''
       IMAGE: gocd-agent-python
       PUSH_DIRECTORY: publish-docker-scripts
       SRC_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
+      TEST_MAKE_ARGS: ''
+      TEST_MAKE_TARGET: test
     template: docker_image
     timer: *id001
   gocd-agent-python-3.13:
@@ -128,15 +134,17 @@ pipelines:
         pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      BUILD_ARGS: ''
+      BUILD_MAKE_ARGS: ''
+      BUILD_MAKE_TARGET: build/3.13
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.13'
       EXTRA_TAG: ''
       IMAGE: gocd-agent-python
       PUSH_DIRECTORY: publish-docker-scripts
       SRC_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
+      TEST_MAKE_ARGS: ''
+      TEST_MAKE_TARGET: test
     template: docker_image
     timer: *id001
   gocd-agent-python-3.14:
@@ -159,15 +167,17 @@ pipelines:
         pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      BUILD_ARGS: ''
+      BUILD_MAKE_ARGS: ''
+      BUILD_MAKE_TARGET: build/3.14
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: '3.14'
       EXTRA_TAG: ''
       IMAGE: gocd-agent-python
       PUSH_DIRECTORY: publish-docker-scripts
       SRC_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
+      TEST_MAKE_ARGS: ''
+      TEST_MAKE_TARGET: test
     template: docker_image
     timer: *id001
   gocd-agent-python-edge:
@@ -190,15 +200,17 @@ pipelines:
         pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      BUILD_ARGS: ''
+      BUILD_MAKE_ARGS: ''
+      BUILD_MAKE_TARGET: build/edge
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: edge
       EXTRA_TAG: ''
       IMAGE: gocd-agent-python
       PUSH_DIRECTORY: publish-docker-scripts
       SRC_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
+      TEST_MAKE_ARGS: ''
+      TEST_MAKE_TARGET: test
     template: docker_image
     timer: *id001
   gocd-agent-python-latest:
@@ -221,14 +233,16 @@ pipelines:
         pipeline: gocd-agent-docker-v25.4.0
         stage: push
     parameters:
-      BUILD_ARGS: ''
+      BUILD_MAKE_ARGS: ''
+      BUILD_MAKE_TARGET: build/latest
       COMMIT_TAG: GO_REVISION_DOCKER_GOCD_AGENT_PYTHON
       DEFAULT_TAG: latest
       EXTRA_TAG: ''
       IMAGE: gocd-agent-python
       PUSH_DIRECTORY: publish-docker-scripts
       SRC_DIRECTORY: docker-gocd-agent-python
-      TEST_ARGS: ''
       TEST_DIRECTORY: docker-gocd-agent-python
+      TEST_MAKE_ARGS: ''
+      TEST_MAKE_TARGET: test
     template: docker_image
     timer: *id001
