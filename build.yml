@@ -5,7 +5,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.4.0
+        tag: v26.2.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.10"
@@ -17,7 +17,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.4.0
+        tag: v26.2.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.11"
@@ -29,7 +29,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.4.0
+        tag: v26.2.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.12"
@@ -41,7 +41,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.4.0
+        tag: v26.2.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.13"
@@ -53,7 +53,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.4.0
+        tag: v26.2.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.14"
@@ -65,7 +65,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.4.0
+        tag: v26.2.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.14"
@@ -77,7 +77,7 @@ builds:
       parent:
         owner: ucphhpc
         image: gocd-agent-docker
-        tag: v25.4.0
+        tag: v26.2.0
         pipeline_dependent: true
       parameters:
         PYTHON_MAJOR_VERSION: "3.14"

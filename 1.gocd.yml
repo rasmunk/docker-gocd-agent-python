@@ -30,7 +30,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.4.0
+        pipeline: gocd-agent-docker-v26.2.0
         stage: push
     parameters:
       BUILD_MAKE_ARGS: ''
@@ -65,7 +65,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.4.0
+        pipeline: gocd-agent-docker-v26.2.0
         stage: push
     parameters:
       BUILD_MAKE_ARGS: ''
@@ -98,7 +98,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.4.0
+        pipeline: gocd-agent-docker-v26.2.0
         stage: push
     parameters:
       BUILD_MAKE_ARGS: ''
@@ -131,7 +131,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.4.0
+        pipeline: gocd-agent-docker-v26.2.0
         stage: push
     parameters:
       BUILD_MAKE_ARGS: ''
@@ -164,7 +164,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.4.0
+        pipeline: gocd-agent-docker-v26.2.0
         stage: push
     parameters:
       BUILD_MAKE_ARGS: ''
@@ -197,7 +197,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.4.0
+        pipeline: gocd-agent-docker-v26.2.0
         stage: push
     parameters:
       BUILD_MAKE_ARGS: ''
@@ -230,7 +230,7 @@ pipelines:
         password: '{{SECRET:[github][access_token]}}'
         username: ${GIT_USER}
       upstream_gocd-agent-python:
-        pipeline: gocd-agent-docker-v25.4.0
+        pipeline: gocd-agent-docker-v26.2.0
         stage: push
     parameters:
       BUILD_MAKE_ARGS: ''
